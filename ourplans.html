@@ -21,7 +21,8 @@
 	<div id="wrapper">
 
 		<!-- Header -->
-		<header id="header" class="alt">
+		<!-- Note: The "styleN" class below should match that of the banner element. -->
+		<header id="header" class="alt style2">
 			<a href="index.html" class="logo"><strong>BingeIt</strong></a>
 			<nav>
 				<a href="#menu">Menu</a>
@@ -32,10 +33,9 @@
 		<nav id="menu">
 			<ul class="links">
 				<li><a href="index.html">Home</a></li>
-				<li><a href="generic.html">My Favourites</a></li>
-				<li><a href="elements.html">Active WatchList</a></li>
-				<li><a href="#">Log In</a></li>
-				<li><a href="#">Sign Up</a></li>
+				<li><a href="landing.html">Landing</a></li>
+				<li><a href="generic.html">Generic</a></li>
+				<li><a href="elements.html">Elements</a></li>
 			</ul>
 			<ul class="actions stacked">
 				<li><a href="#" class="button primary fit">Get Started</a></li>
@@ -44,16 +44,18 @@
 		</nav>
 
 		<!-- Banner -->
-		<section id="banner" class="major">
+		<!-- Note: The "styleN" class below should match that of the header element. -->
+		<section id="banner" class="style2">
 			<div class="inner">
+				<span class="image">
+					<img src="images/pic07.jpg" alt="" />
+				</span>
 				<header class="major">
-					<h1>BingeIt</h1>
+					<h1>Our Plans & Toplists</h1>
 				</header>
 				<div class="content">
-					<p>Get comfortable, some nachos, some drinks & binge with us</p>
-					<ul class="actions">
-						<li><a href="#one" class="button next scrolly">Get Started</a></li>
-					</ul>
+					<p>We have made some plans and toplists specially for you. Click here to have a look at some of them
+					</p>
 				</div>
 			</div>
 		</section>
@@ -61,80 +63,78 @@
 		<!-- Main -->
 		<div id="main">
 
-			<!-- One -->
-			<section id="one" class="tiles">
-				<article>
-					<span class="image">
-						<img src="images/netlfix.jpg" alt="" />
-					</span>
-					<header class="major">
-						<h3><a href="https://www.netflix.com/in/title/80990668?source=35" class="link">Netflix</a></h3>
-						<p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies,
-							anime, documentaries and more – on thousands of internet-connected devices.</p>
-					</header>
-				</article>
-				<article>
-					<span class="image">
-						<img src="images/amazon.jpg" alt="" />
-					</span>
-					<header class="major">
-						<h3><a href="https://www.primevideo.com/storefront/home/ref=atv_nb_logo" class="link">Amazon Prime Video</a></h3>
-						<p>Watch Unlimited Movies, TV Shows & Get Free Shipping Benefits with Amazon Prime. Watch Latest
-							& Exclusive Bollywood, Hollywood Movies, US TV & Kids Shows</p>
-					</header>
-				</article>
-				<article>
-					<span class="image">
-						<img src="images/hotstar.jpg" alt="" />
-					</span>
-					<header class="major">
-						<h3><a href="https://www.hotstar.com/in" class="link">Disney<sup>+</sup> Hotstar</a></h3>
-						<p>Avengers. Frozen. Toy Story. Mickey Mouse. Star Wars. Mandalorian. And lots more. There’s
-							something for everyone in your family on Disney+ Hotstar.</p>
-					</header>
-				</article>
-				<article>
-					<span class="image">
-						<img src="images/youtube.jpg" alt="" />
-					</span>
-					<header class="major">
-						<h3><a href="https://www.youtube.com" class="link">Youtube</a></h3>
-						<p>Enjoy the videos and music you love, upload original content and share it all with friends,
-							family and the world on YouTube.</p>
-					</header>
-				</article>
-				<article>
-					<span class="image">
-						<img src="images/zee5.png" alt="" />
-					</span>
-					<header class="major">
-						<h3><a href="https://www.zee5.com" class="link">Zee5</a></h3>
-						<p>FEATURED All Zindagi Shows Now Available On The ZEE5 Club Pack #HappyRahengeSab ZEE sets
-							itself apart with the new 'ZEE5 club pack'</p>
-					</header>
-				</article>
-				<article>
-					<span class="image">
-						<img src="images/voot.png" alt="" />
-					</span>
-					<header class="major">
-						<h3><a href="https://www.voot.com" class="link">Voot</a></h3>
-						<p>Watch TV Shows, Latest Shows Episodes, TV Shows Clips, Popular TV Series and many more on
-							VOOT with Genres like Comedy, Drama, Reality and many more!</p>
-					</header>
-				</article>
-			</section>
+			<!-- One
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h2>Sed amet aliquam</h2>
+									</header>
+									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.</p>
+								</div>
+							</section> -->
 
 			<!-- Two -->
-			<section id="two">
+			<section id="two" class="spotlights">
+				<section>
+					<a href="generic.html" class="image">
+						<img src="images/pic08.jpg" alt="" data-position="center center" />
+					</a>
+					<div class="content">
+						<div class="inner">
+							<header class="major">
+								<h3>Top 10 Movies from Hollywood</h3>
+							</header>
+							<ul class="actions">
+								<li><a href="generic.html" class="button">Learn more</a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section>
+					<a href="generic.html" class="image">
+						<img src="images/pic09.jpg" alt="" data-position="top center" />
+					</a>
+					<div class="content">
+						<div class="inner">
+							<header class="major">
+								<h3>Top 10 Movies from Bollywood</h3>
+							</header>
+							<ul class="actions">
+								<li><a href="generic.html" class="button">Learn more</a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section>
+					<a href="generic.html" class="image">
+						<img src="images/pic10.jpg" alt="" data-position="25% 25%" />
+					</a>
+					<div class="content">
+						<div class="inner">
+							<header class="major">
+								<h3>Sed nunc ligula</h3>
+							</header>
+							<ul class="actions">
+								<li><a href="generic.html" class="button">Learn more</a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</section>
+
+			<!-- Three -->
+			<section id="three">
 				<div class="inner">
 					<header class="major">
-						<h2>Our Plans & Toplists</h2>
+						<h2>Massa libero</h2>
 					</header>
-					<p>We have made some plans and toplists specially for you. Click here to have a look at some of them
-					</p>
+					<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna
+						magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna.
+						Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem
+						consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus
+						amet pharetra et feugiat tempus.</p>
 					<ul class="actions">
-						<li><a href="ourplans.html" class="button next">Hop on</a></li>
+						<li><a href="generic.html" class="button next">Get Started</a></li>
 					</ul>
 				</div>
 			</section>

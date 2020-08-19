@@ -1835,7 +1835,7 @@ input, select, textarea {
 			-ms-flex-wrap: wrap;
 			flex-wrap: wrap;
 			width: calc(100% + 3em);
-			margin: -1.5em 0 2em -1.5em;
+			margin: -1.5em 0 1em -1.5em;
 		}
 
 			form > .fields > .field {
@@ -3481,9 +3481,9 @@ input, select, textarea {
 				}
 
 		#banner.major {
-			height: 75vh;
-			min-height: 30em;
-			max-height: 50em;
+			height: 65vh;
+			min-height: 20em;
+			max-height: 35em;
 		}
 
 			#banner.major.alt {
@@ -3652,7 +3652,7 @@ input, select, textarea {
 			}
 
 				#contact > .inner > .split > * {
-					padding: 3em 0 1em 3em ;
+					padding: 2em 0 0 3em ;
 					position: relative;
 				}
 
