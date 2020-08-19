@@ -3444,6 +3444,14 @@ input, select, textarea {
 			transform: translateY(25px) rotate(360deg);
 		}
 
+		.rotate a{
+			transition: width 1s, height 1s, transform 1s;
+		}
+
+		.rotate a:hover{
+			transform: translateX(20px);
+		} 
+
 		#banner > .inner {
 			-moz-transition: opacity 1.5s ease, -moz-transform 0.5s ease-out, -moz-filter 0.5s ease, -webkit-filter 0.5s ease;
 			-webkit-transition: opacity 1.5s ease, -webkit-transform 0.5s ease-out, -webkit-filter 0.5s ease, -webkit-filter 0.5s ease;
