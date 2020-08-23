@@ -3445,7 +3445,8 @@ input, select, textarea {
 		}
 
 		.rotate a{
-			transition: width 1s, height 1s, transform 1s;
+			transition: width 0.7s, height 0.7s, transform 0.7s;
+			font-family: 'Montserrat';
 		}
 
 		.rotate a:hover{
@@ -3504,6 +3505,7 @@ input, select, textarea {
 					font-weight: 600;
 					letter-spacing: 0.25em;
 					text-transform: uppercase;
+					font-family: 'Montserrat';
 				}
 
 		#banner.major {
