@@ -3450,7 +3450,7 @@ input, select, textarea {
 		}
 
 		.rotate a:hover{
-			transform: translateX(80px);
+			transform: translateX(40px);
 		} 
 
 		#banner > .inner {
