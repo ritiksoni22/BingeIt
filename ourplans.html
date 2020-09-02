@@ -61,21 +61,25 @@
 		<!-- Main -->
 		<div id="main">
 
-			<!-- One
-							<section id="one">
-								<div class="inner">
-									<header class="major">
-										<h2>Sed amet aliquam</h2>
-									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.</p>
-								</div>
-							</section> -->
+			<!-- One -->
+			<!-- <section id="one">
+				<div class="inner">
+					<header class="major">
+						<h2>Sed amet aliquam</h2>
+					</header>
+					<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus
+						condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem
+						ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et
+						orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In
+						efficitur ligula tate urna.</p>
+				</div>
+			</section> -->
 
 			<!-- Two -->
 			<section id="two" class="spotlights">
 				<section>
 					<div>
-						<video width="500" height="300" controls autoplay style="position:inherit">
+						<video width="500" height="300" controls>
 							<source src="videos/hollywood_trailers.mp4" type="video/mp4">
 						</video>
 					</div>
@@ -92,7 +96,7 @@
 				</section>
 				<section>
 					<div>
-						<video width="500" height="300" controls autoplay style="position:inherit">
+						<video autoplay width="500" height="300" controls>
 							<source src="videos/bollywood_trailers.mp4" type="video/mp4">
 						</video>
 					</div>
@@ -108,15 +112,29 @@
 					</div>
 				</section>
 				<section>
-					<!-- <div>
-						<audio controls>
-							<source src="top10songs.mp3" type="audio/mpeg">
-						</audio>
-					</div> -->
 					<div>
-						<video width="500" height="300" controls autoplay style="position:inherit">
+						<!-- <audio controls>
+							<source src="top10songs.mp3" type="audio/mpeg">
+						</audio> -->
+						<video autoplay width="500" height="300" controls>
 							<source src="videos/top10songs.mp4" type="video/mp4">
 						</video>
+					</div>
+					<div class="content">
+						<div class="inner">
+							<header class="major">
+								<h3>Top 10 Songs Mashup</h3>
+							</header>
+							<ul class="actions">
+								<li><a href="generic.html" class="button">Learn more</a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div>
+						<canvas id="myCanvas" width="500" height="300" style="border:1.5px solid #000000;">
+						</canvas>
 					</div>
 					<div class="content">
 						<div class="inner">
@@ -132,7 +150,7 @@
 			</section>
 
 			<!-- Three -->
-			<section id="three">
+			<!-- <section id="three">
 				<div class="inner">
 					<header class="major">
 						<h2>Massa libero</h2>
@@ -146,7 +164,7 @@
 						<li><a href="generic.html" class="button next">Get Started</a></li>
 					</ul>
 				</div>
-			</section>
+			</section> -->
 
 		</div>
 
@@ -230,6 +248,12 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script>
+		var c = document.getElementById("myCanvas");
+		var ctx = c.getContext("2d");
+		ctx.font = "50px Arial";
+		ctx.strokeText("Coming up soon!", 50, 165);
+	</script>
 
 </body>
 

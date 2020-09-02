@@ -2929,6 +2929,18 @@ input, select, textarea {
 			border-top: 0 !important;
 		}
 
+		video#bgvid {
+			position: inherit;
+			z-index: 0;
+			background-size: 100% 100%;
+			top: 0px;
+			left: 0px; /* fixed to left. Replace it by right if you want.*/
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: auto;
+		}
+
 		.spotlights > section {
 			display: -moz-flex;
 			display: -webkit-flex;
@@ -2941,7 +2953,7 @@ input, select, textarea {
 			background-color: #2e3450;
 		}
 
-			.spotlights > section > .image {
+			.spotlights > section > .video {
 				background-position: center center;
 				background-size: cover;
 				border-radius: 0;
@@ -2950,13 +2962,13 @@ input, select, textarea {
 				width: 30%;
 			}
 
-				.spotlights > section > .image img {
+				.spotlights > section > .video img {
 					border-radius: 0;
 					display: block;
 					width: 100%;
 				}
 
-				.spotlights > section > .image:before {
+				.spotlights > section > .video:before {
 					background: rgba(36, 41, 67, 0.9);
 					content: '';
 					display: block;
@@ -3804,18 +3816,6 @@ input, select, textarea {
 				padding-top: 2.75em;
 			}
 
-		}
-
-		video#bgvid {
-			position: absolute;
-			z-index: 0;
-			background-size: 100% 100%;
-			top: 0px;
-			left: 0px; /* fixed to left. Replace it by right if you want.*/
-			min-width: 100%;
-			min-height: 100%;
-			width: auto;
-			height: auto;
 		}
 		
 /* Menu */
