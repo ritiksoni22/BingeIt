@@ -7,12 +7,52 @@
 <html>
 
 <head>
-	<title>Generic - Forty by HTML5 UP</title>
+	<title>My Favourites</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" /> </noscript>
+	<meta content="text/html; charset = ISO-8859-1" http-equiv="content-type">
+
+	<script type="application/javascript">
+		function loadJSON() {
+			var data_file = "data.json";
+			alert("Your list has been updated!");
+			var http_request = new XMLHttpRequest();
+			try {
+				// Opera 8.0+, Firefox, Chrome, Safari
+				http_request = new XMLHttpRequest();
+			} catch (e) {
+				// Internet Explorer Browsers
+				try {
+					http_request = new ActiveXObject("Msxml2.XMLHTTP");
+				} catch (e) {
+					try {
+						http_request = new ActiveXObject("Microsoft.XMLHTTP");
+					} catch (e) {
+						// Something went wrong
+						alert("Your browser broke!");
+						return false;
+					}
+				}
+			}
+			http_request.onreadystatechange = function () {
+				if (http_request.readyState == 4) {
+					// Javascript function JSON.parse to parse JSON data
+					var jsonObj = JSON.parse(http_request.responseText);
+					// jsonObj variable now contains the data structure and can
+					// be accessed as jsonObj.name and jsonObj.country.
+					document.getElementById("Name").innerHTML = jsonObj.name;
+					document.getElementById("Country").innerHTML = jsonObj.country;
+					document.getElementById("OTTplatform").innerHTML = jsonObj.OTTplatform;
+				}
+			}
+			http_request.open("GET", data_file, true);
+			http_request.send();
+		}
+	</script>
+
 </head>
 
 <body class="is-preload">
@@ -48,27 +88,53 @@
 			<section id="one">
 				<div class="inner">
 					<header class="major">
-						<h1>Generic</h1>
+						<h1>My Favourites</h1>
 					</header>
-					<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
-					<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque
-						venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim
-						auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque
-						in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar
-						mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque
-						enim turpis, hendrerit.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class
-						aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam
-						tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc
-						ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non,
-						bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus.
-						Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In
-						non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.
-					</p>
-					<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor
-						imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet.
-						Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at,
-						elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+					<table class="src">
+						<tr>
+							<th>Movie Name</th>
+							<th>Country</th>
+							<th>OTT Platform</th>
+						</tr>
+						<tr>
+							<td>
+								<div id="Name">Dilwale Dulhaniya Le Jaayenge</div>
+							</td>
+							<td>
+								<div id="Country">India</div>
+							</td>
+							<td>
+								<div id="OTTplatform">Amazon Prime Video</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div id="Name">Dilwale Dulhaniya Le Jaayenge</div>
+							</td>
+							<td>
+								<div id="Country">India</div>
+							</td>
+							<td>
+								<div id="OTTplatform">Amazon Prime Video</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div id="Name">Dilwale Dulhaniya Le Jaayenge</div>
+							</td>
+							<td>
+								<div id="Country">India</div>
+							</td>
+							<td>
+								<div id="OTTplatform">Amazon Prime Video</div>
+							</td>
+						</tr>
+					</table>
+
+					<div class="central">
+						<button type="button" onclick="loadJSON()"> Update Details </button>
+					</div>
+
 				</div>
 			</section>
 
