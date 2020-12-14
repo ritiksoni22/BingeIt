@@ -10,9 +10,14 @@
 	<title>My Favourites</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="src/carousel.css" rel="stylesheet">
 	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" /> </noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+
 	<meta content="text/html; charset = ISO-8859-1" http-equiv="content-type">
 
 	<script type="application/javascript">
@@ -51,7 +56,14 @@
 			http_request.open("GET", data_file, true);
 			http_request.send();
 		}
+
 	</script>
+
+	<style>
+		.checked {
+			color: orange;
+		}
+	</style>
 
 </head>
 
@@ -82,14 +94,246 @@
 		</nav>
 
 		<!-- Main -->
+
+		<section class="text-gray-700 body-font">
+			<div class="container px-5 py-24 mx-auto">
+				<div class="flex flex-wrap w-full mb-20">
+					<div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+						<h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900"
+							style="color: white; font-size: 4rem;font-weight: 900; font-style: italic;">My Favourites
+						</h1>
+						<br>
+						<!-- <div class="h-1 w-20 bg-indigo-500 rounded"></div> -->
+					</div>
+
+				</div>
+				<h2 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900"
+					style="color: white; font-size: xxx-large;font-weight: 900;">Recently Watched</h2>
+				<br>
+				<div class="flex flex-wrap -m-4">
+					<div class="xl:w-1/4 md:w-1/2 p-4">
+						<div class="bg-gray-100 p-6 rounded-lg">
+							<img class="h-40 rounded w-full object-cover object-center mb-6" src="images/yjhd.gif"
+								alt="content">
+							<!-- <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">SUBTITLE</h3> -->
+							<h2 class="text-lg text-gray-900 font-medium title-font mb-4"
+								style="font-weight: 900; font-size: xx-large;">Yeh Jawaani Hai Deewani</h2>
+							<p class="leading-relaxed text-base">Kabir and Naina bond during a trekking trip. Before
+								Naina can express herself, Kabir leaves India to pursue his career. They meet again
+								years later, but he still cherishes his dreams more than bonds. Starring - Ranbir
+								Kapoor, Deepika Padukone, Kalki Koechlin, Aditya Roy Kapoor</p>
+							<!-- <h2>Star Rating</h2> -->
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+						</div>
+
+					</div>
+					<div class="xl:w-1/4 md:w-1/2 p-4">
+						<div class="bg-gray-100 p-6 rounded-lg">
+							<img class="h-40 rounded w-full object-cover object-center mb-6" src="images/znmd.jpg"
+								alt="content">
+							<!-- <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">SUBTITLE</h3> -->
+							<h2 class="text-lg text-gray-900 font-medium title-font mb-4"
+								style="font-weight: 900; font-size: xx-large;">Zindagi Na Milegi Dobara</h2>
+							<p class="leading-relaxed text-base">ZNMD is a 2011 Indian Hindi-language buddy road comedy
+								drama film directed by Zoya Akhtar and produced by Farhan Akhtar of Excel Entartainment.
+								The film features an ensemble cast consisting of Hrithik Roshan, Abhay Deol, Farhan
+								Akhtar,Katrina Kaif, and Kalki Koechlin and ludia Rodriguez</p>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+						</div>
+					</div>
+					<div class="xl:w-1/4 md:w-1/2 p-4">
+						<div class="bg-gray-100 p-6 rounded-lg">
+							<img class="h-40 rounded w-full object-cover object-center mb-6" src="images/ddd.jpg"
+								alt="content">
+							<!-- <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">SUBTITLE</h3> -->
+							<h2 class="text-lg text-gray-900 font-medium title-font mb-4"
+								style="font-weight: 900; font-size: xx-large;">Dil Dhadakne Do</h2>
+
+							<p class="leading-relaxed text-base">The Mehra family must contemplate over their way of
+								living and their love lives while on a cruise celebrating their 30th wedding
+								anniversary. Directed by Zoya Akhtar, and produced by Ritesh Sidhwani and Farhan Akhtar.
+								The film features an ensemble cast of Anil Kapoor, Shefali Shah, Priyanka Chopra,
+								Ranveer Singh, Anushka Sharma and Farhan Akhtar</p>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+						</div>
+					</div>
+					<div class="xl:w-1/4 md:w-1/2 p-4">
+						<div class="bg-gray-100 p-6 rounded-lg">
+							<img class="h-40 rounded w-full object-cover object-center mb-6" src="images/dch.jpg"
+								alt="content">
+							<!-- <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">SUBTITLE</h3> -->
+							<h2 class="text-lg text-gray-900 font-medium title-font mb-4"
+								style="font-weight: 900; font-size: xx-large;">Dil Chahata Hai</h2>
+
+							<p class="leading-relaxed text-base">Dil Chahata Hai is a 2001 Indian Hindi-language
+								coming-of-age romantic comedy-drama film, marking Farhan Akhtar's directorial debut, as
+								well as his debut as a writer. Starring Aamir Khan, Saif Ali Khan, Akshaye Khanna,
+								Preity Zinta, Sonali Kulkarni and Dimple Kapadia. Directed by Zoya Akhtar and produced
+								byb Farhan Akhtar of Excel Entertainment.</p>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="text-gray-700 body-font">
+			<div class="container px-5 py-24 mx-auto">
+				<div class="flex flex-col">
+					<div class="h-1 bg-gray-200 rounded overflow-hidden">
+						<div class="w-24 h-full bg-indigo-500"></div>
+					</div>
+					<br> <br>
+					<div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+						<h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0"
+							style="color: white; font-size: xxx-large;font-weight: 900;">Your Personal <br> <br> Marvel
+							Collection</h1>
+						<!-- <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">Street art subway tile salvia four
+							dollar toast bitters selfies quinoa yuccie synth meditation iPhone intelligentsia prism
+							tofu. Viral gochujang bitters dreamcatcher.</p> -->
+					</div>
+				</div>
+				<div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+					<div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+						<div class="rounded-lg h-64 overflow-hidden">
+							<img alt="content" class="object-cover object-center h-full w-full"
+								src="images/avengerseg.jpg">
+						</div>
+						<h2 class="text-xl font-medium title-font text-gray-900 mt-5" style="color: white;">Avengers End
+							Game</h2>
+						<!-- <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p> -->
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<!-- <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
+					<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+					  <path d="M5 12h14M12 5l7 7-7 7"></path>
+					</svg>
+				  </a> -->
+					</div>
+					<div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+						<div class="rounded-lg h-64 overflow-hidden">
+							<img alt="content" class="object-cover object-center h-full w-full"
+								src="images/avengersiw.jpg">
+						</div>
+						<h2 class="text-xl font-medium title-font text-gray-900 mt-5" style="color: white;">Avengers
+							Infinity War</h2>
+						<!-- <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p> -->
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+						<!-- <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
+					<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+					  <path d="M5 12h14M12 5l7 7-7 7"></path>
+					</svg>
+				  </a> -->
+					</div>
+					<div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+						<div class="rounded-lg h-64 overflow-hidden">
+							<img alt="content" class="object-cover object-center h-full w-full"
+								src="images/avengersau.jpg">
+						</div>
+						<h2 class="text-xl font-medium title-font text-gray-900 mt-5" style="color: white;">Avengers Age
+							of Ultron</h2>
+						<!-- <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p> -->
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+						<!-- <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
+					<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+					  <path d="M5 12h14M12 5l7 7-7 7"></path>
+					</svg>
+				  </a> -->
+					</div>
+					<div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+						<div class="rounded-lg h-64 overflow-hidden">
+							<img alt="content" class="object-cover object-center h-full w-full"
+								src="images/mavengers.jpg">
+						</div>
+						<h2 class="text-xl font-medium title-font text-gray-900 mt-5" style="color: white;">The Avengers
+						</h2>
+						<!-- <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p> -->
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+						<!-- <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
+					<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+					  <path d="M5 12h14M12 5l7 7-7 7"></path>
+					</svg>
+				  </a> -->
+					</div>
+					<div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+						<div class="rounded-lg h-64 overflow-hidden">
+							<img alt="content" class="object-cover object-center h-full w-full" src="images/cacw.jpg">
+						</div>
+						<h2 class="text-xl font-medium title-font text-gray-900 mt-5" style="color: white;">Captain
+							America: Civil War</h2>
+						<!-- <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p> -->
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+						<!-- <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
+					<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+					  <path d="M5 12h14M12 5l7 7-7 7"></path>
+					</svg>
+				  </a> -->
+					</div>
+					<div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+						<div class="rounded-lg h-64 overflow-hidden">
+							<img alt="content" class="object-cover object-center h-full w-full" src="images/im3.jpg">
+						</div>
+						<h2 class="text-xl font-medium title-font text-gray-900 mt-5" style="color: white;">Iron Man 3
+						</h2>
+						<!-- <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p> -->
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+						<!-- <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
+					<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+					  <path d="M5 12h14M12 5l7 7-7 7"></path>
+					</svg>
+				  </a> -->
+					</div>
+				</div>
+			</div>
+		</section>
+
+
 		<div id="main" class="alt">
 
 			<!-- One -->
 			<section id="one">
 				<div class="inner">
-					<header class="major">
+					<!-- <header class="major">
 						<h1>My Favourites</h1>
-					</header>
+					</header> -->
 					<table class="src">
 						<tr>
 							<th>Movie Name</th>
@@ -107,94 +351,106 @@
 								<div id="OTTplatform">Amazon Prime Video</div>
 							</td>
 						</tr>
-						<!-- <tr>
+						<tr>
 							<td>
-								<div id="Name">Dilwale Dulhaniya Le Jaayenge</div>
+								<div id="Name">Hum Saath Saath Hai</div>
 							</td>
 							<td>
 								<div id="Country">India</div>
 							</td>
 							<td>
-								<div id="OTTplatform">Amazon Prime Video</div>
+								<div id="OTTplatform">Netflix</div>
 							</td>
 						</tr>
 						<tr>
 							<td>
-								<div id="Name">Dilwale Dulhaniya Le Jaayenge</div>
+								<div id="Name">Amar Akbar Anthony</div>
 							</td>
 							<td>
 								<div id="Country">India</div>
 							</td>
 							<td>
-								<div id="OTTplatform">Amazon Prime Video</div>
+								<div id="OTTplatform">Zee5 Premier</div>
 							</td>
-						</tr> -->
+						</tr>
 					</table>
 
 					<div class="central">
 						<button type="button" onclick="loadJSON()"> Update Details </button>
-					</div>
 
-				</div>
-			</section>
+						<br> <br>
 
-		</div>
-
-		<!-- Contact -->
-		<!-- <section id="contact">
-			<div class="inner">
-				<section>
-					<form method="post" action="#">
-						<div class="fields">
-							<div class="field half">
-								<label for="name">Name</label>
-								<input type="text" name="name" id="name" />
+						<section class="text-gray-700 body-font">
+							<div class="container px-5 py-24 mx-auto">
+								<div class="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
+									<h1 class="flex-grow sm:pr-16 text-2xl font-medium title-font text-gray-900"
+										style="color: white; font-size: xx-large;font-weight: 900;">Resume from where
+										you left off! -----------></h1>
+									<button
+										class="flex-shrink-0 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0"><a
+											href="index.html">Start streaming</a> </button>
+								</div>
 							</div>
-							<div class="field half">
-								<label for="email">Email</label>
-								<input type="text" name="email" id="email" />
-							</div>
-							<div class="field">
-								<label for="message">Message</label>
-								<textarea name="message" id="message" rows="6"></textarea>
-							</div>
-						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Send Message" class="primary" /></li>
-							<li><input type="reset" value="Clear" /></li>
-						</ul>
-					</form>
-				</section>
-				<section class="split">
-					<section>
-						<div class="contact-method">
-							<span class="icon solid alt fa-envelope"></span>
-							<h3>Email</h3>
-							<a href="#">information@untitled.tld</a>
-						</div>
-					</section>
-					<section>
-						<div class="contact-method">
-							<span class="icon solid alt fa-phone"></span>
-							<h3>Phone</h3>
-							<span>(000) 000-0000 x12387</span>
-						</div>
-					</section>
-					<section>
-						<div class="contact-method">
-							<span class="icon solid alt fa-home"></span>
-							<h3>Address</h3>
-							<span>1234 Somewhere Road #5432<br />
-								Nashville, TN 00000<br />
-								United States of America</span>
-						</div>
-					</section>
-				</section>
-			</div>
-		</section> -->
+						</section>
 
-		<!-- Footer -->
-		<!-- <footer id="footer">
+						<hr>
+
+						<!-- 		
+		Contact -->
+						<section id="contact">
+							<div class="inner">
+								<section>
+									<form method="post" action="#">
+										<div class="fields">
+											<div class="field half">
+												<label for="name">Name</label>
+												<input type="text" name="name" id="name" />
+											</div>
+											<div class="field half">
+												<label for="email">Email</label>
+												<input type="text" name="email" id="email" />
+											</div>
+											<div class="field">
+												<label for="message">Message</label>
+												<textarea name="message" id="message" rows="6"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="reset" value="Clear" /></li>
+										</ul>
+									</form>
+								</section>
+								<section class="split">
+									<section>
+										<div class="contact-method">
+											<span class="icon solid alt fa-envelope"></span>
+											<h3>Email</h3>
+											<a href="#">information@untitled.tld</a>
+										</div>
+									</section>
+									<section>
+										<div class="contact-method">
+											<span class="icon solid alt fa-phone"></span>
+											<h3>Phone</h3>
+											<span>(000) 000-0000 x12387</span>
+										</div>
+									</section>
+									<section>
+										<div class="contact-method">
+											<span class="icon solid alt fa-home"></span>
+											<h3>Address</h3>
+											<span>1234 Somewhere Road #5432<br />
+												Nashville, TN 00000<br />
+												United States of America</span>
+										</div>
+									</section>
+								</section>
+							</div>
+						</section>
+
+						<!-- Footer -->
+						<!-- <footer id="footer">
 			<div class="inner">
 				<ul class="icons">
 					<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
@@ -210,16 +466,17 @@
 			</div>
 		</footer> -->
 
-	</div>
+					</div>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+					<!-- Scripts -->
+					<script src="assets/js/jquery.min.js"></script>
+					<script src="assets/js/jquery.scrolly.min.js"></script>
+					<script src="assets/js/jquery.scrollex.min.js"></script>
+					<script src="assets/js/browser.min.js"></script>
+					<script src="assets/js/breakpoints.min.js"></script>
+					<script src="assets/js/util.js"></script>
+					<script src="assets/js/main.js"></script>
+
 
 </body>
 
