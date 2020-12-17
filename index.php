@@ -7,6 +7,7 @@
 <html>
 
 <head>
+	<link rel="shortcut icon" href="images/BingeIt.png" />
 	<title>BingeIt - Home</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -24,7 +25,7 @@
 
 		<!-- Header -->
 		<header id="header" class="alt">
-			<a href="index.html" class="logo"><strong>BingeIt</strong></a>
+			<a href="index.php" class="logo"><strong>BingeIt</strong></a>
 			<nav>
 				<a href="#menu">Menu</a>
 			</nav>
@@ -33,14 +34,35 @@
 		<!-- Menu -->
 		<nav id="menu">
 			<ul class="links">
-				<li><a href="index.html">Home</a></li>
+				<li><a href="index.php">Home</a></li>
 				<li><a href="my_favourites.html">My Favourites</a></li>
 				<li><a href="active_watchlist.html">Active WatchList</a></li>
 			</ul>
 			<ul class="actions stacked">
-				<li><a href="login_getstarted.html" class="button fit">Log In</a></li>
+				<li><a href="login2.php" class="button fit">Log In</a></li>
 			</ul>
 		</nav>
+
+		<?php
+            $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+ if (strpos($url, "done") !== false) {
+  $id=trim($url,'http://localhost/IPProject/index.php?sucsess=');
+   echo '<div class="col-md-4 offset-md-4 col-sm-4 offset-sm-4 container text-center alert alert-success" role="alert">
+           Account sucessfully created
+         </div>';
+ }
+ elseif (strpos($url, "login=error") !== false) {
+  echo '<div class="col-md-4 offset-md-4 col-sm-4 offset-sm-4 container text-center alert alert-danger" role="alert">
+          An error occured please try again later
+        </div>';
+}
+elseif (strpos($url, "success") !== false) {
+  $id=trim($url,'http://localhost/IPProject/index.php?success=');
+  echo '<div class="col-md-4 offset-md-4 col-sm-4 offset-sm-4 container text-center alert alert-success" role="alert">
+          Welcome
+        </div>';
+}
+  ?>
 
 		<!-- Banner -->
 		<section id="banner" class="major">
@@ -56,7 +78,7 @@
 				<div class="content">
 					<p>Get comfortable, some nachos, some drinks & BingeIt with us</p>
 					<ul class="actions rotate">
-						<li><a href="login_getstarted.html" class="button next scrolly">Get Started</a></li>
+						<li><a href="login2.php" class="button next scrolly">Get Started</a></li>
 					</ul>
 				</div>
 			</div>

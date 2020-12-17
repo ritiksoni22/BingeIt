@@ -7,13 +7,15 @@
 <html>
 
 <head>
-    <title>BingeIt</title>
+    <link rel="shortcut icon" href="images/BingeIt.png" />
+    <title>SignUp - Login</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
     <noscript>
-        <link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
 </head>
 
 <body class="is-preload">
@@ -23,7 +25,7 @@
 
         <!-- Header -->
         <header id="header" class="alt">
-            <a href="index.html" class="logo"><strong>BingeIt</strong></a>
+            <a href="index.php" class="logo"><strong>BingeIt</strong></a>
             <nav>
                 <a href="#menu">Menu</a>
             </nav>
@@ -32,17 +34,36 @@
         <!-- Menu -->
         <nav id="menu">
             <ul class="links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="my_favourites.html">My Favourites</a></li>
                 <li><a href="active_watchlist.html">Active WatchList</a></li>
             </ul>
         </nav>
 
+        <?php
+        $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+        if (strpos($url, "cpass") !== false) {
+          echo '<div class="col-md-4 offset-md-4 col-sm-4 offset-sm-4 container text-center alert alert-danger" role="alert">
+                  Password 1 and Password 2 does not match
+                </div>';
+        }
+        elseif (strpos($url, "login=empty") !== false) {
+         echo '<div class="col-md-4 offset-md-4 col-sm-4 offset-sm-4 container text-center alert alert-danger" role="alert">
+                 Fill out all fields
+               </div>';
+       }
+       elseif (strpos($url, "login=error") !== false) {
+         echo '<div class="col-md-4 offset-md-4 col-sm-4 offset-sm-4 container text-center alert alert-danger" role="alert">
+                 Invalid username or password
+               </div>';
+       }
+         ?>
+
         <!-- Contact -->
         <section id="contact">
             <div class="inner">
                 <section>
-                    <form action="#" onsubmit="return validate(this)" method="post">
+                    <form action="post2.php" method="post">
                         <div class="fields">
 
                             <div class="field half">
@@ -68,51 +89,51 @@
 
                             <div class="field half">
                                 <label for="age">Age</label>
-                                <!-- <input type="text" size="" placeholder="Enter Your Age"  min="12" max="100" value="" required > -->
-                                <input type="text" placeholder="Enter your age" size="2" name="age" min="12" max="100" required />
+                                <input type="text" placeholder="Enter your age" size="2" name="age" min="12" max="100"
+                                    required />
                             </div>
 
                             <div class="field">
-                                <label for="pass">Password</label>
-                                <input type="password" placeholder="Enter new password" name="pass"
+                                <label for="pass1">Password</label>
+                                <input type="password" placeholder="Enter new password" name="pass1"
                                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" id="pass"
                                     title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                                     required />
                             </div>
 
                             <div class="field">
-                                <label for="cpass">Confirm Password</label>
-                                <input type="password" placeholder="Re-enter password" name="cpass" id="pass"
+                                <label for="pass2">Confirm Password</label>
+                                <input type="password" placeholder="Re-enter password" name="pass2" id="pass"
                                     required />
                             </div>
 
                         </div>
                         <ul class="actions">
-                            <li><input type="submit" value="Register" class="primary" /></li>
+                            <li><input type="submit" value="Sign Up" class="primary" /></li>
                             <li><input type="reset" value="Clear" /></li>
                         </ul>
                     </form>
                 </section>
                 <section>
                     <br><br>
-                    <form action="#" onsubmit="return validate(this)" method="post">
+                    <form action="login.php" method="post">
                         <div class="fields">
 
                             <div class="field">
                                 <label for="email">Email</label>
-                                <input type="email" placeholder="Enter your email" name="email" id="email" required />
+                                <input type="email" placeholder="Enter your email" name="email2" id="email2" required />
                             </div>
 
                             <div class="field">
-                                <label for="pass">Password</label>
-                                <input type="password" placeholder="Enter password" name="pass"
-                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" id="pass"
+                                <label for="pass1">Password</label>
+                                <input type="password" placeholder="Enter password" name="pass3"
+                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" id="pass3"
                                     title="Enter your valid password" required />
                             </div>
 
                         </div>
                         <ul class="actions">
-                            <li><input type="submit" value="Login" class="primary" /></li>
+                            <li><input type="submit" name="submit" value="sign in" class="primary" /></li>
                         </ul>
                     </form>
                 </section>
