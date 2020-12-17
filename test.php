@@ -19,7 +19,6 @@
                 <td><input type="text" name="lname"></td> 
             </tr> 
 
-            
             <tr> 
                 <td>E-mail:</td> 
                 <td><input type="text" name="email"></td> 
@@ -39,7 +38,6 @@
                 <td></td> 
                 <td style="float:right;"><input type="submit"></td> 
             </tr>           
-            
             
         </table> 
     </form> 

@@ -9,7 +9,7 @@ if($link === false){
 }
  
 // Attempt insert query execution
-$sql = "INSERT INTO sign_in (fname, lname, email, pass1, pass2) VALUES ('Peter', 'Parker', 'peterparker@mail.com', 'passpeter', 'passshubham')";
+$sql = "INSERT INTO sign_in (fname, lname, email, pass1, pass2) VALUES ('Peter', 'Parker', 'peterparker@mail.com', 'passpeter', 'passritik')";
 if(mysqli_query($link, $sql)){
     echo "Records inserted successfully.";
 } else{

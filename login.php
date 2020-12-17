@@ -25,7 +25,7 @@ if(isset($_POST['submit'])) {
         }else {
 			$first = $row['fname'];
 			setcookie( "first", $first, time() + (3600), "/");
-			header("Location: index.php?success=$first");
+			header("Location: login_success.html?success=$first");
 			exit();
 		}
 	  }
