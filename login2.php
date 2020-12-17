@@ -81,7 +81,7 @@
                                 <input type="email" placeholder="Enter your email" name="email" id="email" required />
                             </div>
 
-                            <div class="field half">
+                            <!-- <div class="field half">
                                 <label for="cno">Contact Number</label>
                                 <input type="tel" placeholder="Enter your 10 digit contact number" name="cno" id="cno"
                                     required />
@@ -91,25 +91,25 @@
                                 <label for="age">Age</label>
                                 <input type="text" placeholder="Enter your age" size="2" name="age" min="12" max="100"
                                     required />
-                            </div>
+                            </div> -->
 
                             <div class="field">
                                 <label for="pass1">Password</label>
                                 <input type="password" placeholder="Enter new password" name="pass1"
-                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" id="pass"
+                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" id="pass1"
                                     title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                                     required />
                             </div>
 
                             <div class="field">
                                 <label for="pass2">Confirm Password</label>
-                                <input type="password" placeholder="Re-enter password" name="pass2" id="pass"
+                                <input type="password" placeholder="Re-enter password" name="pass2" id="pass2"
                                     required />
                             </div>
 
                         </div>
                         <ul class="actions">
-                            <li><input type="submit" value="Sign Up" class="primary" /></li>
+                            <li><input type="submit" name="save" value="Sign Up" class="primary" /></li>
                             <li><input type="reset" value="Clear" /></li>
                         </ul>
                     </form>
@@ -133,7 +133,7 @@
 
                         </div>
                         <ul class="actions">
-                            <li><input type="submit" name="submit" value="sign in" class="primary" /></li>
+                            <li><input type="submit" name="submit" value="submit" class="primary" /></li>
                         </ul>
                     </form>
                 </section>
@@ -150,7 +150,7 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <SCRIPT type="text/javascript">
+    <!-- <SCRIPT type="text/javascript">
         function validate(thisform) {
 
             var contactno = thisform.cno.value;
@@ -175,7 +175,7 @@
             }
             return true;
         }
-    </SCRIPT>
+    </SCRIPT> -->
 
 </body>
 

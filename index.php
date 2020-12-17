@@ -46,7 +46,7 @@
 		<?php
             $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
  if (strpos($url, "done") !== false) {
-  $id=trim($url,'http://localhost/IPProject/index.php?sucsess=');
+  $id=trim($url,'http://localhost/BingeIt/index.php?sucsess=');
    echo '<div class="col-md-4 offset-md-4 col-sm-4 offset-sm-4 container text-center alert alert-success" role="alert">
            Account sucessfully created
          </div>';
@@ -57,7 +57,7 @@
         </div>';
 }
 elseif (strpos($url, "success") !== false) {
-  $id=trim($url,'http://localhost/IPProject/index.php?success=');
+  $id=trim($url,'http://localhost/BingeIt/index.php?success=');
   echo '<div class="col-md-4 offset-md-4 col-sm-4 offset-sm-4 container text-center alert alert-success" role="alert">
           Welcome
         </div>';

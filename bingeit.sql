@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 17, 2020 at 01:05 PM
+-- Generation Time: Dec 17, 2020 at 04:17 PM
 -- Server version: 10.4.16-MariaDB
 -- PHP Version: 7.4.12
 
@@ -41,7 +41,8 @@ CREATE TABLE `sign_in` (
 
 INSERT INTO `sign_in` (`id`, `fname`, `lname`, `email`, `pass`) VALUES
 (6, 'ritik', 'soni', 'sonritik@gmail.com', '$2y$10$8YMkRPzLFNSKqmov5ZyDv.wuTn.qChGnnQOJY1XGm/vF0ftxrKs0i'),
-(7, 'fwjeo', 'ownvonw', 'owvnwo@cov.com', '$2y$10$ryGDhrsNZ8YjCRr5jmVd5uak7B8Q5CHeRlPZdX2Yhn2TaW.nTmmUm');
+(7, 'fwjeo', 'ownvonw', 'owvnwo@cov.com', '$2y$10$ryGDhrsNZ8YjCRr5jmVd5uak7B8Q5CHeRlPZdX2Yhn2TaW.nTmmUm'),
+(8, 'abc', 'xyz', 'abc@xyz.com', '$2y$10$/ipxxHfwuyQLkJR2i.0ojuw187NhVJV55ZOaIDM./d7e7AhBZcrS.');
 
 --
 -- Indexes for dumped tables
@@ -61,7 +62,7 @@ ALTER TABLE `sign_in`
 -- AUTO_INCREMENT for table `sign_in`
 --
 ALTER TABLE `sign_in`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
