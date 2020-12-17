@@ -37,6 +37,7 @@
 				<li><a href="index.php">Home</a></li>
 				<li><a href="my_favourites.html">My Favourites</a></li>
 				<li><a href="active_watchlist.html">Active WatchList</a></li>
+				<li><a href="our_plans.html">Our Plans</a></li>
 			</ul>
 			<ul class="actions stacked">
 				<li><a href="login2.php" class="button fit">Log In</a></li>
