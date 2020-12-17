@@ -20,6 +20,32 @@
 			font-family: 'Patrick Hand', cursive !important;
 		}
 	</style>
+	<script>
+		function getContent(url) {
+			var xmlhttp;
+
+			if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+				xmlhttp = new XMLHttpRequest();
+			}
+
+			else {// code for IE6, IE5
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+
+			xmlhttp.onreadystatechange = function () {
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					document.getElementById("contentArea").innerHTML = xmlhttp.responseText;
+				}
+			}
+
+			xmlhttp.open('GET', url, true);
+			xmlhttp.send();
+		}
+
+		function clearContent() {
+			document.getElementById('contentArea').innerHTML = ' ';
+		}
+	</script>
 </head>
 
 <body class="is-preload">
@@ -172,7 +198,9 @@
 					<div class="box alt">
 						<div class="row gtr-50 gtr-uniform">
 							<div class="col-3"><span class="image fit"><img style="border-radius: 10px;"
-										src="images/TaareZameenPar.jpg" alt="" /></span>
+										src="images/TaareZameenPar.jpg" onmouseover='getContent("AJAX/im1.html")'
+										onmouseout='clearContent()' /></span>
+								<div class="box" id="contentArea"> </div>
 							</div>
 							<div class="col-3"><span class="image fit"><img style="border-radius: 10px;"
 										src="images/chennaiexpress.jpg" alt="" /></span>
