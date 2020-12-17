@@ -63,6 +63,7 @@
         <section id="contact">
             <div class="inner">
                 <section>
+                    <h1>Sign up</h1>
                     <form action="post2.php" method="post">
                         <div class="fields">
 
@@ -116,6 +117,7 @@
                 </section>
                 <section>
                     <br><br>
+                    <h1>Log in</h1>
                     <form action="login.php" method="post">
                         <div class="fields">
 
