@@ -7,8 +7,6 @@
 <html>
 
 <head>
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
 	<link rel="shortcut icon" href="images/BingeIt.png" />
 	<title>BingeIt - Home</title>
 	<meta charset="utf-8" />
@@ -18,11 +16,6 @@
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
-	<style>
-		body {
-			font-family: 'Patrick Hand', cursive !important;
-		}
-	</style>
 </head>
 
 <body class="is-preload">
@@ -32,7 +25,7 @@
 
 		<!-- Header -->
 		<header id="header" class="alt">
-			<a href="index.php" class="logo"><strong>BINGEIT</strong></a>
+			<a href="index.php" class="logo"><strong>BingeIt</strong></a>
 			<nav>
 				<a href="#menu">Menu</a>
 			</nav>
@@ -44,7 +37,6 @@
 				<li><a href="index.php">Home</a></li>
 				<li><a href="my_favourites.html">My Favourites</a></li>
 				<li><a href="active_watchlist.html">Active WatchList</a></li>
-				<li><a href="our_plans.html">Our Plans</a></li>
 			</ul>
 			<ul class="actions stacked">
 				<li><a href="login2.php" class="button fit">Log In</a></li>
@@ -56,7 +48,7 @@
  if (strpos($url, "done") !== false) {
   $id=trim($url,'http://localhost/BingeIt/index.php?success=');
    echo '<div class="col-md-4 offset-md-4 col-sm-4 offset-sm-4 container text-center alert alert-success" role="alert">
-           Account sucessfully logged
+           Account sucessfully logged in
          </div>';
  }
  elseif (strpos($url, "login=error") !== false) {
@@ -83,7 +75,7 @@ elseif (strpos($url, "success") !== false) {
 						</h1>
 					</div>
 				</header>
-				<div id="nacho" class="content">
+				<div class="content">
 					<p>Get comfortable, some nachos, some drinks & BingeIt with us</p>
 					<ul class="actions rotate">
 						<li><a href="login2.php" class="button next scrolly">LogIn</a></li>

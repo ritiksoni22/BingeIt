@@ -23,25 +23,20 @@
 	<script>
 		function getContent(url) {
 			var xmlhttp;
-
 			if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
 				xmlhttp = new XMLHttpRequest();
 			}
-
 			else {// code for IE6, IE5
 				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 			}
-
 			xmlhttp.onreadystatechange = function () {
 				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 					document.getElementById("contentArea").innerHTML = xmlhttp.responseText;
 				}
 			}
-
 			xmlhttp.open('GET', url, true);
 			xmlhttp.send();
 		}
-
 		function clearContent() {
 			document.getElementById('contentArea').innerHTML = ' ';
 		}
@@ -198,39 +193,43 @@
 					<div class="box alt">
 						<div class="row gtr-50 gtr-uniform">
 							<div class="col-3"><span class="image fit"><img style="border-radius: 10px;"
-										src="images/TaareZameenPar.jpg" onmouseover='getContent("AJAX/im1.html")'
+										src="images/TaareZameenPar.jpg"
+										onmouseover='getContent("AJAX/taarezameenpar.html")'
 										onmouseout='clearContent()' /></span>
-								<div class="box" id="contentArea"> </div>
+							</div>
+
+							<div class="col-6">
+								<div class="box image fit" id="contentArea"> </div>
+							</div>
+
+							<div class="col-3"><span class="image fit"><img style="border-radius: 10px;"
+										src="images/chennaiexpress.jpg"
+										onmouseover='getContent("AJAX/chennaiexpress.html")'
+										onmouseout='clearContent()' /></span>
 							</div>
 							<div class="col-3"><span class="image fit"><img style="border-radius: 10px;"
-										src="images/chennaiexpress.jpg" alt="" /></span>
+										src="images/SecretSuperstar.jpg"
+										onmouseover='getContent("AJAX/secretsuperstar.html")'
+										onmouseout='clearContent()' /></span>
 							</div>
 							<div class="col-3"><span class="image fit"><img style="border-radius: 10px;"
-										src="images/SecretSuperstar.jpg" alt="" /></span>
-							</div>
-							<!-- Break -->
-							<div class="col-3"><span class="image fit"><img style="border-radius: 10px;"
-										src="images/Malang.jpg" alt="" /></span>
+										src="images/Malang.jpg" onmouseover='getContent("AJAX/malang.html")'
+										onmouseout='clearContent()' /></span>
 							</div>
 							<div class="col-3"><span class="image fit"><img style="border-radius: 10px;"
-										src="images/Laxmii_poster.jpg" alt="" /></span>
-							</div>
-							<!-- Break -->
-							<div class="col-3"><span class="image fit"><img style="border-radius: 10px;"
-										src="images/Chhichhore.jpg" alt="" /></span>
+										src="images/Chhichhore.jpg" onmouseover='getContent("AJAX/chhichhore.html")'
+										onmouseout='clearContent()' /></span>
 							</div>
 							<div class="col-3"><span class="image fit"><img style="border-radius: 10px;"
-										src="images/KabirSingh.jpg" alt="" /></span>
-							</div>
-							<div class="col-3"><span class="image fit"><img style="border-radius: 10px;"
-										src="images/Pink.jpg" alt="" /></span>
+										src="images/Pink.jpg" onmouseover='getContent("AJAX/pink.html")'
+										onmouseout='clearContent()' /></span>
 							</div>
 						</div>
 					</div>
-
 				</div>
 			</section>
 		</div>
+
 
 		<!-- Contact -->
 		<section id="contact">
