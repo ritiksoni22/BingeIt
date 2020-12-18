@@ -16,6 +16,12 @@
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
+	<style>
+		.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+	</style>
 </head>
 
 <body class="is-preload">
@@ -38,6 +44,14 @@
 				<li><a href="my_favourites.html">My Favourites</a></li>
 				<li><a href="active_watchlist.html">Active WatchList</a></li>
 				<li><a href="our_plans.html">Our Plans</a></li>
+				<form class="form-inline my-2 my-lg-0" action="http://google.com/search" target="_blank" method="GET">
+                <input class="form-control mr-sm-2" type="search" id="search" placeholder="Search movie"
+                    aria-label="Search" list='list1' name="q">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <datalist id="list1">
+                <!-- will add suggestion here -->
+            </datalist>
 			</ul>
 			<ul class="actions stacked">
 				<li><a href="login2.php" class="button fit">Log In</a></li>
@@ -178,7 +192,7 @@ elseif (strpos($url, "success") !== false) {
 						<div class="contact-method">
 							<span class="icon solid alt fa-envelope"></span>
 							<h3>Email</h3>
-							<a href="mailto:bingeitsakec@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>
+							<a href="mailto:bingeitsakec@gmail.com">
 								&nbsp; E-mail To us at bingeitsakec@gmail.com</a>
 						</div>
 					</section>
@@ -188,7 +202,7 @@ elseif (strpos($url, "success") !== false) {
 						<div class="contact-method">
 							<span class="icon solid alt fa-phone"></span>
 							<h3>Phone</h3>
-							<a href="tel:+917678060767" class="tel"><i class="fa fa-phone" aria-hidden="true"></i>
+							<a href="tel:+917678060767" class="tel">
 								&nbsp; Call us at - +917678060767</a>
 						</div>
 					</section>
