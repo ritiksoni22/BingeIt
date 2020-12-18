@@ -21,7 +21,7 @@ if(isset($_POST['save']))
 	 $sql = "INSERT INTO sign_in(fname,lname,email,pass)
 	 VALUES ('$fname','$lname','$email','$hashedPass')";
 	 if (mysqli_query($conn, $sql)) {
-		header("Location: index.php?done=$fname");
+		header("Location: signup_success.html?$fname");
 		exit();
 	 } else {
 		header("Location: index.php?error");
