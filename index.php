@@ -45,7 +45,7 @@
 				<li><a href="active_watchlist.html">Active WatchList</a></li>
 				<li><a href="our_plans.html">Our Plans</a></li>
 				<form class="form-inline my-2 my-lg-0" action="http://google.com/search" target="_blank" method="GET">
-                <input class="form-control mr-sm-2" type="search" id="search" placeholder="Search movie"
+                <input class="form-control mr-sm-2" type="search" id="search" placeholder="Google Search"
                     aria-label="Search" list='list1' name="q">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
