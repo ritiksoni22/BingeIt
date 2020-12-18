@@ -20,6 +20,27 @@
 			font-family: 'Patrick Hand', cursive !important;
 		}
 	</style>
+	<script>
+		function getContent(url) {
+			var xmlhttp;
+			if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+				xmlhttp = new XMLHttpRequest();
+			}
+			else {// code for IE6, IE5
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			xmlhttp.onreadystatechange = function () {
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					document.getElementById("contentArea").innerHTML = xmlhttp.responseText;
+				}
+			}
+			xmlhttp.open('GET', url, true);
+			xmlhttp.send();
+		}
+		function clearContent() {
+			document.getElementById('contentArea').innerHTML = ' ';
+		}
+	</script>
 </head>
 
 <body class="is-preload">
@@ -82,9 +103,9 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td><div id="director1">Zoya Akhtar</div></td>
-								<td id="movie1">Zindagi Na Milegi Dobara</td>
-								<td id="rating1">8.1</td>
+								<td>Zoya Akhtar</td>
+								<td>Zindagi Na Milegi Dobara</td>
+								<td>8.1</td>
 							</tr>
 							<tr>
 								<td>Rajkumar Hirani</td>
@@ -151,7 +172,7 @@
 								</tr>
 							</tbody>
 						</table>
-						<!-- <button style="float:right" type="button" onclick="loadJSON()"> Update </button> -->
+						<button style="float:right" type="button" onclick="loadJSON()"> Update </button>
 					</div>
 				</div>
 
@@ -259,54 +280,6 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-
-	<script type="application/javascript">
-
-		function loadJSON() {
-			var data_file = "data.json";
-			alert("Data Updated");
-			var http_request = new XMLHttpRequest();
-			try {
-				// Opera 8.0+, Firefox, Chrome, Safari
-				http_request = new XMLHttpRequest();
-			} catch (e) {
-				// Internet Explorer Browsers
-				try {
-					http_request = new ActiveXObject("Msxml2.XMLHTTP");
-
-				} catch (e) {
-
-					try {
-						http_request = new ActiveXObject("Microsoft.XMLHTTP");
-					} catch (e) {
-						// Something went wrong
-						alert("Your browser broke!");
-						return false;
-					}
-
-				}
-			}
-
-			http_request.onreadystatechange = function () {
-
-				if (http_request.readyState == 4) {
-					// Javascript function JSON.parse to parse JSON data
-					var jsonObj = JSON.parse(http_request.responseText);
-
-					// jsonObj variable now contains the data structure and can
-					// be accessed as jsonObj.name and jsonObj.country.
-					document.getElementById("director1").innerHTML = jsonObj.director1;
-					document.getElementById("movie1").innerHTML = jsonObj.movie1;
-					document.getElementById("rating1").innerHTML = jsonObj.rating1;
-				}
-			}
-
-			http_request.open("GET", data_file, true);
-
-			http_request.send();
-		}
-
-	</script>
 
 </body>
 
